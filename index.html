@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dulce Repostería — Postres artesanales hechos a pedido</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <a class="brand" href="#inicio">
+          <span class="brand-mark" aria-hidden="true">🧁</span>
+          <span>Dulce Repostería<span class="brand-dot">.</span></span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-links" id="nav-links" aria-label="Navegación principal">
+          <a href="#catalogo">Postres</a>
+          <a href="#como-funciona">Cómo pedir</a>
+          <a href="#mi-cuenta">Mi Cuenta</a>
+          <a href="#encargos">Encargos</a>
+        </nav>
+
+        <a class="button button-blue-outline nav-cta" href="#mi-cuenta">
+          Registro / Historial <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1. Portada Principal -->
+      <section class="hero wrap" id="inicio">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span>✦</span> REPOSTERÍA CASERA
+          </div>
+          <h1>
+            Postres artesanales <span>hechos a pedido.</span>
+          </h1>
+          <p class="hero-lede">
+            Preparamos galletas, brownies, cupcakes, flan casero y aperitivos dulces con ingredientes frescos. Regístrate para guardar tus pedidos y descubrir cuál es tu postre favorito.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-purple" href="#catalogo">
+              Ver postres <span aria-hidden="true">→</span>
+            </a>
+            <a class="button button-blue-outline" href="#mi-cuenta">
+              Crear cuenta / Ver historial
+            </a>
+          </div>
+
+          <div class="social-proof">
+            <div class="avatar-stack" aria-hidden="true">
+              <span>🍪</span>
+              <span>🧁</span>
+              <span>🍮</span>
+            </div>
+            <p><strong>Recetas caseras</strong> horneadas frescas cada semana</p>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Vitrina de postres destacados">
+          <div class="mini-note note-right">✦ 100% Casero</div>
+          <div class="showcase-box">
+            <div class="showcase-window-top">
+              <span class="dot dot-purple"></span>
+              <span class="dot dot-blue"></span>
+              <span class="dot dot-beige"></span>
+              <span>vitrina-del-dia</span>
+            </div>
+            <div style="font-size: 64px; line-height: 1.1; margin: 10px 0;">🧁🍪🍮</div>
+            <h2 style="font-size: 20px; font-weight: 900; margin-bottom: 6px;">Hechos en Casa</h2>
+            <p style="font-size: 13px; color: var(--text);">
+              Elige tu postre favorito del catálogo y encárgalo para la fecha que necesites.
+            </p>
+          </div>
+          <div class="mini-note note-left">⚡ Recién horneados</div>
+        </div>
+      </section>
+
+      <!-- 2. Cinta decorativa -->
+      <section class="ticker" aria-label="Especialidades de la casa">
+        <div class="ticker-track">
+          <span>GALLETAS CHOCO-CHIPS</span>
+          <b>✳</b>
+          <span>BROWNIES DE CHOCOLATE</span>
+          <b>✳</b>
+          <span>CUPCAKES CASEROS</span>
+          <b>✳</b>
+          <span>FLAN DE CARAMELO</span>
+          <b>✳</b>
+          <span>MINI TARTALETAS DULCES</span>
+        </div>
+      </section>
+
+      <!-- 3. Catálogo de Postres con filtro por categoría -->
+      <section class="catalog-section wrap" id="catalogo">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">NUESTRO MENÚ</div>
+            <h2>
+              Nuestros postres.<br>
+              <span>Hechos en casa.</span>
+            </h2>
+          </div>
+          <p>
+            Haz clic en cualquier categoría para ver únicamente ese tipo de postre.
+          </p>
+        </div>
+
+        <div class="filter-row" role="group" aria-label="Filtrar postres por categoría">
+          <button type="button" class="filter-chip active" data-category="todos">Todos</button>
+          <button type="button" class="filter-chip" data-category="galletas">🍪 Galletas</button>
+          <button type="button" class="filter-chip" data-category="brownies">🍫 Brownies</button>
+          <button type="button" class="filter-chip" data-category="cupcakes">🧁 Cupcakes</button>
+          <button type="button" class="filter-chip" data-category="flan">🍮 Flan</button>
+          <button type="button" class="filter-chip" data-category="aperitivos">🥧 Aperitivos</button>
+          <span class="course-count" id="catalog-count">Mostrando 8 postres</span>
+        </div>
+
+        <div class="dessert-grid" id="products-grid">
+          <article class="product-card card-beige" data-category="galletas">
+            <div class="card-top">
+              <span class="dessert-icon">🍪</span>
+              <span class="category-badge">Galletas</span>
+            </div>
+            <h3>Galletas Choco-Chips Clásicas</h3>
+            <p>Galletas caseras de mantequilla doradas al horno con chispas de chocolate.</p>
+            <div class="dessert-meta">
+              <span>Porción individual</span>
+              <span class="price-tag">$4.500</span>
+            </div>
+            <div class="card-bottom">
+              <button type="button" class="btn-card" data-dessert="Galletas Choco-Chips Clásicas">Ingredientes</button>
+              <button type="button" class="btn-card" data-order="Galletas Choco-Chips Clásicas">Encargar ↗</button>
+            </div>
+          </article>
+
+          <article class="product-card card-purple" data-category="galletas">
+            <div class="card-top">
+              <span class="dessert-icon">🍪</span>
+              <span class="category-badge">Galletas</span>
+            </div>
+            <h3>Galletas de Vainilla</h3>
+            <p>Galletas suaves de vainilla decoradas en casa con un toque de glaseado dulce.</p>
+            <div class="dessert-meta">
+              <span>Porción individual</span>
+              <span class="price-tag">$4.200</span>
+            </div>
+            <div class="card-bottom">
+              <button type="button" class="btn-card" data-dessert="Galletas de Vainilla">Ingredientes</button>
+              <button type="button" class="btn-card" data-order="Galletas de Vainilla">Encargar ↗</button>
+            </div>
+          </article>
+
+          <article class="product-card card-blue" data-category="brownies">
+            <div class="card-top">
+              <span class="dessert-icon">🍫</span>
+              <span class="category-badge">Brownies</span>
+            </div>
+            <h3>Brownie de Chocolate</h3>
+            <p>Cuadro de brownie casero tradicional, suave por dentro y con cubierta crujiente.</p>
+            <div class="dessert-meta">
+              <span>Porción individual</span>
+              <span class="price-tag">$5.500</span>
+            </div>
+            <div class="card-bottom">
+              <button type="button" class="btn-card" data-dessert="Brownie de Chocolate">Ingredientes</button>
+              <button type="button" class="btn-card" data-order="Brownie de Chocolate">Encargar ↗</button>
+            </div>
+          </article>
+
+          <article class="product-card card-cream" data-category="brownies">
+            <div class="card-top">
+              <span class="dessert-icon">🍫</span>
+              <span class="category-badge">Brownies</span>
+            </div>
+            <h3>Brownie con Arequipe</h3>
+            <p>Brownie de chocolate tradicional decorado por encima con arequipe cremoso.</p>
+            <div class="dessert-meta">
+              <span>Porción individual</span>
+              <span class="price-tag">$6.000</span>
+            </div>
+            <div class="card-bottom">
+              <button type="button" class="btn-card" data-dessert="Brownie con Arequipe">Ingredientes</button>
+              <button type="button" class="btn-card" data-order="Brownie con Arequipe">Encargar ↗</button>
+            </div>
+          </article>
+
+          <article class="product-card card-purple" data-category="cupcakes">
+            <div class="card-top">
+              <span class="dessert-icon">🧁</span>
+              <span class="category-badge">Cupcakes</span>
+            </div>
+            <h3>Cupcake de Vainilla</h3>
+            <p>Ponqué esponjoso de vainilla cubierto con crema suave decorada a mano.</p>
+            <div class="dessert-meta">
+              <span>Unidad decorada</span>
+              <span class="price-tag">$5.800</span>
+            </div>
+            <div class="card-bottom">
+              <button type="button" class="btn-card" data-dessert="Cupcake de Vainilla">Ingredientes</button>
+              <button type="button" class="btn-card" data-order="Cupcake de Vainilla">Encargar ↗</button>
+            </div>
+          </article>
+
+          <article class="product-card card-beige" data-category="cupcakes">
+            <div class="card-top">
+              <span class="dessert-icon">🧁</span>
+              <span class="category-badge">Cupcakes</span>
+            </div>
+            <h3>Cupcake de Chocolate</h3>
+            <p>Cupcake suave de cacao con crema batida de vainilla y trocitos de chocolate.</p>
+            <div class="dessert-meta">
+              <span>Unidad decorada</span>
+              <span class="price-tag">$6.000</span>
+            </div>
+            <div class="card-bottom">
+              <button type="button" class="btn-card" data-dessert="Cupcake de Chocolate">Ingredientes</button>
+              <button type="button" class="btn-card" data-order="Cupcake de Chocolate">Encargar ↗</button>
+            </div>
+          </article>
+
+          <article class="product-card card-cream" data-category="flan">
+            <div class="card-top">
+              <span class="dessert-icon">🍮</span>
+              <span class="category-badge">Flan</span>
+            </div>
+            <h3>Flan Casero</h3>
+            <p>Flan tradicional de leche de textura suave bañado en caramelo dulce hecho en casa.</p>
+            <div class="dessert-meta">
+              <span>Porción fría</span>
+              <span class="price-tag">$5.000</span>
+            </div>
+            <div class="card-bottom">
+              <button type="button" class="btn-card" data-dessert="Flan Casero">Ingredientes</button>
+              <button type="button" class="btn-card" data-order="Flan Casero">Encargar ↗</button>
+            </div>
+          </article>
+
+          <article class="product-card card-blue" data-category="aperitivos">
+            <div class="card-top">
+              <span class="dessert-icon">🥧</span>
+              <span class="category-badge">Aperitivos</span>
+            </div>
+            <h3>Mini Tartaletas Dulces</h3>
+            <p>Bocaditos dulces en base de galleta rellenos de crema pastelera casera y fruta.</p>
+            <div class="dessert-meta">
+              <span>Cajita x4 unidades</span>
+              <span class="price-tag">$7.500</span>
+            </div>
+            <div class="card-bottom">
+              <button type="button" class="btn-card" data-dessert="Mini Tartaletas Dulces">Ingredientes</button>
+              <button type="button" class="btn-card" data-order="Mini Tartaletas Dulces">Encargar ↗</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 4. Sección Cómo Funciona -->
+      <section class="how-section" id="como-funciona">
+        <div class="wrap how-inner">
+          <div class="how-art">
+            <div class="path-card" aria-label="Tres pasos para hacer tu pedido">
+              <div class="step-circle" title="Paso 1: Regístrate">👤</div>
+              <div class="step-circle blue-step" title="Paso 2: Elige">🍪</div>
+              <div class="step-circle beige-step" title="Paso 3: Historial">🏆</div>
+            </div>
+          </div>
+
+          <div class="how-copy">
+            <div class="eyebrow">PASO A PASO</div>
+            <h2>
+              Regístrate una vez.<br>
+              <span>Recordamos tus favoritos.</span>
+            </h2>
+            <p style="color: var(--text); margin-top: 10px;">
+              Al crear tu cuenta, la página guarda tus encargos automáticamente para mostrarte cuál fue tu último postre pedido y cuál es el que más pides.
+            </p>
+            <ul class="benefits">
+              <li><span>1</span> Crea tu cuenta con tu nombre, correo y teléfono</li>
+              <li><span>2</span> Haz tus encargos eligiendo tu postre y fecha de entrega</li>
+              <li><span>3</span> Consulta en tu perfil tu último pedido y el postre que más pides</li>
+            </ul>
+            <a class="button button-purple" href="#mi-cuenta">
+              Ir a Mi Cuenta <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Formularios de Registro / Inicio de Sesión e Historial de Postres -->
+      <section class="account-section wrap" id="mi-cuenta">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">CUENTA DE CLIENTES</div>
+            <h2>
+              Regístrate y consulta<br>
+              <span>tu historial de postres.</span>
+            </h2>
+          </div>
+          <p>
+            Regístrate o cambia de usuario para ver cómo la página detecta automáticamente el último postre pedido y el que más pides.
+          </p>
+        </div>
+
+        <div class="account-grid">
+          <!-- Columna Izquierda: Formularios de Registro e Inicio de Sesión -->
+          <div class="form-card">
+            <div class="auth-tabs" role="tablist">
+              <button type="button" class="auth-tab-btn active" id="tab-register-btn">Crear Cuenta Nueva</button>
+              <button type="button" class="auth-tab-btn" id="tab-login-btn">Iniciar Sesión</button>
+            </div>
+
+            <!-- Formulario 1: Registro de Usuario -->
+            <form id="register-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="reg-name">Nombre completo</label>
+                <input type="text" id="reg-name" class="form-input" placeholder="Ej. Camila Rojas" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reg-email">Correo electrónico</label>
+                <input type="email" id="reg-email" class="form-input" placeholder="Ej. camila@correo.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reg-phone">Teléfono / WhatsApp</label>
+                <input type="tel" id="reg-phone" class="form-input" placeholder="Ej. 301 555 1234" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reg-password">Contraseña</label>
+                <input type="password" id="reg-password" class="form-input" placeholder="Crea una contraseña" required>
+              </div>
+              <button type="submit" class="button button-purple" style="width: 100%;">
+                Registrar mi cuenta
+              </button>
+            </form>
+
+            <!-- Formulario 2: Inicio de Sesión -->
+            <form id="login-form" hidden novalidate>
+              <div class="form-group">
+                <label class="form-label" for="login-email">Correo registrado</label>
+                <input type="email" id="login-email" class="form-input" placeholder="valentina@colegio.edu" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="login-password">Contraseña</label>
+                <input type="password" id="login-password" class="form-input" placeholder="Contraseña (prueba: 123)" required>
+              </div>
+              <button type="submit" class="button button-purple" style="width: 100%;">
+                Entrar a mi cuenta
+              </button>
+            </form>
+
+            <!-- Botones rápidos de cuentas de prueba para demostrar en clase -->
+            <div class="demo-users-bar">
+              <span style="font-size: 12px; font-weight: 900; width: 100%; color: var(--text);">
+                Cuentas registradas de ejemplo (clic para probar):
+              </span>
+              <button type="button" class="demo-user-chip" data-switch-user="valentina@colegio.edu">
+                👤 Valentina Gómez
+              </button>
+              <button type="button" class="demo-user-chip" data-switch-user="sebastian@colegio.edu">
+                👤 Sebastián Mejía
+              </button>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Estadísticas automáticas e Historial del Usuario -->
+          <div class="form-card" id="user-profile-panel">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <div class="eyebrow" style="margin-bottom: 6px;">PERFIL ACTIVO</div>
+                <h3 id="profile-user-name" style="font-size: 24px; font-weight: 900;">Valentina Gómez</h3>
+                <p id="profile-user-meta" style="font-size: 13px; color: var(--text);">valentina@colegio.edu · Tel: 300 412 8890</p>
+              </div>
+              <button type="button" class="button button-blue-outline" id="repeat-fav-btn" style="padding: 9px 14px; font-size: 12px;">
+                Repetir mi favorito ↻
+              </button>
+            </div>
+
+            <!-- Los 2 indicadores que detecta la plataforma automáticamente -->
+            <div class="stats-pair">
+              <div class="stat-highlight-box">
+                <span class="stat-label-small">🕒 Último postre que pidió</span>
+                <strong class="stat-dessert-name" id="stat-last-dessert">Flan Casero</strong>
+                <span class="stat-subtext" id="stat-last-date">Pedido el 2026-11-02</span>
+              </div>
+
+              <div class="stat-highlight-box blue-box">
+                <span class="stat-label-small">🏆 Postre que más pide</span>
+                <strong class="stat-dessert-name" id="stat-top-dessert">Brownie de Chocolate</strong>
+                <span class="stat-subtext" id="stat-top-count">Pedido 2 veces</span>
+              </div>
+            </div>
+
+            <h4 style="font-size: 14px; font-weight: 900; margin-top: 8px;">📋 Historial de pedidos de este usuario:</h4>
+            <ul class="history-list" id="user-history-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Sección de Encargos y Horarios de Atención -->
+      <section class="order-section wrap" id="encargos">
+        <div class="order-grid">
+          <div class="form-card">
+            <div class="eyebrow">NUEVO PEDIDO</div>
+            <h2 style="font-size: 28px; font-weight: 900; margin-bottom: 8px;">Agenda un Encargo</h2>
+            <p style="font-size: 14px; color: var(--text); margin-bottom: 20px;">
+              Al confirmar tu encargo aquí, se guardará automáticamente en el historial de tu cuenta activa arriba.
+            </p>
+
+            <form id="custom-order-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="client-name">Cliente (usuario activo)</label>
+                <input type="text" id="client-name" class="form-input" placeholder="Ej. Valentina Gómez" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="client-dessert">Postre que deseas encargar</label>
+                <select id="client-dessert" class="form-input">
+                  <option value="Galletas Choco-Chips Clásicas">Galletas Choco-Chips Clásicas</option>
+                  <option value="Galletas de Vainilla">Galletas de Vainilla</option>
+                  <option value="Brownie de Chocolate">Brownie de Chocolate</option>
+                  <option value="Brownie con Arequipe">Brownie con Arequipe</option>
+                  <option value="Cupcake de Vainilla">Cupcake de Vainilla</option>
+                  <option value="Cupcake de Chocolate">Cupcake de Chocolate</option>
+                  <option value="Flan Casero">Flan Casero</option>
+                  <option value="Mini Tartaletas Dulces">Mini Tartaletas Dulces</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="client-date">Fecha de entrega</label>
+                <input type="date" id="client-date" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="client-notes">Cantidad o mensaje adicional (opcional)</label>
+                <textarea id="client-notes" class="form-input" rows="2" placeholder="Ej. Caja de 6 unidades para cumpleaños..."></textarea>
+              </div>
+
+              <button type="submit" class="button button-purple" style="width: 100%;">
+                Confirmar encargo
+              </button>
+            </form>
+
+            <div id="form-feedback-box" class="feedback-banner" hidden></div>
+          </div>
+
+          <div class="info-card">
+            <div class="eyebrow">INFORMACIÓN DE LA CASA</div>
+            <h2 style="font-size: 26px; font-weight: 900; margin-bottom: 8px;">Horneamos con dedicación</h2>
+            <p style="font-size: 14px; color: var(--text);">
+              Todos nuestros postres se elaboran en casa cuidando cada detalle de sabor y presentación.
+            </p>
+
+            <ul class="info-list">
+              <li class="info-item">
+                <span class="info-emoji">🕒</span>
+                <div>
+                  <strong style="display: block; font-size: 14px;">Tiempo de anticipación</strong>
+                  <span style="font-size: 13px; color: var(--text);">Realiza tu pedido con 1 o 2 días de anticipación.</span>
+                </div>
+              </li>
+              <li class="info-item">
+                <span class="info-emoji">🎀</span>
+                <div>
+                  <strong style="display: block; font-size: 14px;">Presentación especial</strong>
+                  <span style="font-size: 13px; color: var(--text);">Empaque cuidado ideal para compartir o regalar.</span>
+                </div>
+              </li>
+              <li class="info-item">
+                <span class="info-emoji">🍫</span>
+                <div>
+                  <strong style="display: block; font-size: 14px;">Ingredientes frescos</strong>
+                  <span style="font-size: 13px; color: var(--text);">Mantequilla real, chocolate semiamargo y fruta fresca.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <span><strong>Dulce Repostería.</strong> Postres artesanales hechos a pedido.</span>
+        <span>Hecho con dedicación en Colombia 🇨🇴</span>
+      </div>
+    </footer>
+
+    <!-- Ventana Modal de Ingredientes -->
+    <div class="modal-overlay" id="detail-modal" hidden>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-dessert-title">
+        <header class="modal-header">
+          <span class="eyebrow" style="margin-bottom: 0;">INGREDIENTES</span>
+          <button type="button" class="modal-close" id="close-detail-btn" aria-label="Cerrar ventana">✕</button>
+        </header>
+        <h3 id="modal-dessert-title" style="font-size: 22px; font-weight: 900; margin-bottom: 6px;">Galletas Choco-Chips Clásicas</h3>
+        <p style="font-size: 13.5px; color: var(--text);">Preparado en casa con los siguientes ingredientes:</p>
+        <ul class="ingredients-list" id="modal-ingredients-list"></ul>
+        <button type="button" class="button button-purple" id="modal-select-btn" style="width: 100%;">
+          Elegir este postre para mi pedido →
+        </button>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
